@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>FAQs</title>
+    <!--Ion icons-->
+    <link rel="stylesheet" href="joy.css">
+</head>
+ <body>
+  @include('header')
+    <section>
+        <div class="container">
+          <h2>Help & FAQs</h2>
+            <div class="accordion">
+                <div class="accordion-item" id="question1">
+                   <a class="accordion-link" href="#question1">
+                    Q1: What is CodeExamify?
+                     <i class="icon ion-md-add"></i>
+                     <i class="icon ion-md-remove"></i> 
+                    </a>
+                     <div class="answer">
+                      <p>A1: CodeExamify is an online examination system specifically designed for coding exams. It allows users to take coding tests and evaluate their programming skills. </p>
+                     </div>
+                </div>
+                  <div class="accordion-item" id="question2">
+                   <a class="accordion-link" href="#question2">
+                    Q2: How can I create an account on CodeExamify?
+                     <i class="icon ion-md-add"></i>
+                     <i class="icon ion-md-remove"></i>
+                    </a>
+                     <div class="answer">
+                       <p>A2: To create an account on CodeExamify, simply visit our website and click on the "Sign Up" button. Fill in the required details, such as your name, email address, and password, and follow the instructions to complete the registration process.</p> 
+                     </div>
+                </div>
+                  <div class="accordion-item" id="question3">
+                   <a class="accordion-link" href="#question3">
+                    Q3: How do I schedule an exam on CodeExamify?
+                     <i class="icon ion-md-add"></i>
+                     <i class="icon ion-md-remove"></i>
+                    </a>
+                     <div class="answer">
+                      <p>A3: After logging into your CodeExamify account, go to the exam scheduling section. Choose the desired exam from the available options, select the date and time, and click on the "Schedule Exam" button to confirm your selection.</p>
+                     </div>
+                    </div>
+                 <div class="accordion-item" id="question4">
+                  <a class="accordion-link" href="#question4">
+                    How are exams evaluated on CodeExamify?
+                    <i class="icon ion-md-add"></i>
+                    <i class="icon ion-md-remove"></i>                   
+                  </a>
+                    <div class="answer">
+                      <p>CodeExamify uses an automated evaluation system to assess your coding solutions. The system checks for correctness, efficiency, and adherence to the specified requirements. The evaluation is based on predefined test cases and coding best practices..</p>
+                  </div>
+               </div>
+               <div class="accordion-item" id="question5">
+                <a class="accordion-link" href="#question5">
+                  How can I contact the support team at CodeExamify?
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>                   
+                </a>
+                  <div class="answer">
+                    <p>If you have any queries or need assistance, you can reach out to our support team through the "Contact Us" page on our website. Fill in the required details and describe your issue or question. Our team will respond to you as soon as possible.</p>
+                </div>
+             </div>
+                 <div class="register">
+                  <p>Can't find your answers?<a href="#">Contact Us</a></p>
+              </div>
+        </div>
+      </div>
+      
+    </section>
+</body>
+</html>
