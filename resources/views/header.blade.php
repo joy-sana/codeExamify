@@ -39,7 +39,7 @@
                     <li><a href="{{ url('/Admin/dashboard') }}">Dashboard</a></li>
                 @endif
                 <li><a href="{{ url('/feedback') }}">Feedback</a></li>
-                <li><a href="{{ url('/learn') }}">Learn</a></li>
+                <li><a href="{{ url('/learn') }}">Learn HTML</a></li>
                 <li><a href="{{ url('/faq') }}">Help & FAQ</a></li>
 
             </ul>
