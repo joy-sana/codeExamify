@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: #ff9999;
+                margin:0;
+                }
+              .site-background{
+                  height:100vh;
+                  width:100vw;
+                  background-image:url("libary3.jpg");
+                  background-size: cover;
+                  background-position: center;
+              }
+            .navbar{
+                position:fixed;
+                top:0;
+                left:0;
+                right: 0;
+                background-color: black;
+                height:50px;
+                display:flex;
+                justify-content:flex-end;
+                align-items: center;
+                padding-inline:24px;
+                }
+            .site-title{
+                display:flex;
+               font-size: 40px;
+              justify-content:center;
+              align-items: center;
+              margin:auto;
+               } 
+               button{
+                   height:30px;
+                   width:90px;
+                   text-align: center;
+                   font-size:16px;
+               }
+               .adminsignin-btn{
+                   width:120px;
+               }
+               .btn-grp{
+                   display: flex;
+                   height:50px;
+                   width:350px;
+                   justify-content: space-between;
+                   align-items: center;
+                   
+               }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="btn-grp">
+                <a href="{{ url('/signin') }}"><button class="signin-btn" > Sign In</button></a>
+                <a href="{{ url('/signup') }}"><button class="signup-btn"> Sign Up</button></a>
+                <a href="{{ url('/admin') }}"><button class="adminsignin-btn">Admin Sign In</button></a>
+            </div>
+        </div>  
+        <div class="site-background">
+            <div class="site-title">
+                     <h1> READCRAFTER </h1>
+            </div>
+        </div>
+    </body>
+</html>

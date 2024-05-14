@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Side Bar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        } 
+        body{
+            height:100vh;
+            width:100vw; 
+            background-image:url("pic7.jpg");
+            background-size:cover;
+            background-position: center;
+        }   
+        .side-nav {
+            width: 75px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #FF8080;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            transition: width 0.15s;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #C2D9FF;
+            height: 40px;
+        }
+        .panCake-btn {
+            align-items: center;
+            aspect-ratio:1;
+            width: 40px;
+            background-color:#0000;
+            border: none;
+            padding: 0px;
+            margin-top: 4px;
+        }
+        .panCake-btn>i {
+            margin: auto;
+            font-size: 40px;
+        }
+        .site-logo {
+            font-size:28px;
+            font-weight:550;
+            white-space: nowrap;
+            position: absolute;
+            color: white;
+            transform: translateX(-100px);
+            opacity: 0;
+            transition: all .2s ease;
+            z-index: -1;
+        }
+        .catagory-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 40vh;
+            justify-content:space-evenly;
+        }
+        .catagory-wrapper a{
+            height:30px;
+            width:100px;
+            background-color:brown;
+            text-decoration:none;
+        }
+        .lib-cat {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .lib-cat>ul {
+            display: none;
+            position: absolute;
+            background-color: #5233c1;
+            width: 150px;
+            margin-left: 40px;
+            list-style: none;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-evenly;
+            padding: 0 1rem;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            transition: 0.4s;
+        }
+        .menu-btns>a {
+            color: white;
+            text-decoration: none;
+            margin: -4px 0;
+        }
+        .catagory-wrapper li {
+            margin: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .lib-cat>.menu-headings-btn,
+        .logouts>.menu-headings-btn {
+            display: flex;
+            gap: 8px;
+            text-decoration: none;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            align-items: center;
+            white-space: nowrap;
+        }
+        .menu-headings {
+            font-size: 20px;
+            color: #190482;
+        }
+        .lib-cat>.menu-headings-btn>i,
+        .lib-cat>.menu-headings-btn>iconify-icon,
+        .logouts>.menu-headings-btn>i {
+            color: #190482;
+            font-size: 30px;
+        }
+        .logouts li a {
+            font-size: 20px;
+            display: flex;
+            white-space: nowrap;
+        }
+        .logouts > li > a>i {
+            margin-right: 3px;
+            font-size:30px;
+        }
+        .icon-profile::after,
+        .icon-catagory::after,
+        .icon-Status::after,
+        .icon-payment::after,
+        .icon-logout::after {
+            content: attr(name);
+            position: absolute;
+            height: 20px;
+            font-size: 16px;
+            background-color: #130264a9;
+            color: white;
+            padding: 4px 8px;
+            margin-left: 10px;
+            margin-top: 2px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .side-nav:not(.expanded-sidebar) .icon-profile::after,
+        .side-nav:not(.expanded-sidebar) .icon-catagory::after,
+        .side-nav:not(.expanded-sidebar) .icon-Status::after,
+        .side-nav:not(.expanded-sidebar) .icon-payment::after,
+        .side-nav:not(.expanded-sidebar) .icon-logout::after {
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .side-nav:not(.expanded-sidebar) .icon-profile:hover::after,
+        .side-nav:not(.expanded-sidebar) .icon-catagory:hover::after,
+        .side-nav:not(.expanded-sidebar) .icon-Status:hover::after,
+        .side-nav:not(.expanded-sidebar) .icon-payment:hover::after,
+        .side-nav:not(.expanded-sidebar) .icon-logout:hover::after {
+            opacity: 1;
+            scale: .9;
+        }
+        .icon-profile:hover,
+        .icon-catagory:hover,
+        .icon-Status:hover,
+        .icon-payment:hover,
+        .icon-logout:hover {
+            scale: 1.2;
+        }
+        .expanded-sidebar {
+            width: 250px;
+            border-right: 2px solid #190482;
+            opacity: 0.9;      
+        }
+        .menu-headings,
+        .menu-btns>a,
+        .menu-btns {
+            display: none;
+            transition: width 0.7s;
+        }
+        .expanded-sidebar .site-logo{
+            position: relative;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        .expanded-sidebar .menu-headings,
+        .expanded-sidebar .menu-btns>a {
+            display: block;
+        }
+        .open-profile-menu-bar .lib-cat>.profile-menu-bar,
+        .open-catagory-menu-bar .lib-cat>.catagory-menu-bar,
+        .open-status-menu-bar .lib-cat>.status-menu-bar,
+        .open-payment-menu-bar .lib-cat>.payment-menu-bar{
+            position: relative;
+            display: flex;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="side-nav" id="sideNav">
+        <div class="logo">
+            <h1 class="site-logo">Readcrafter</h1>
+            <button class="panCake-btn" id="openSidebarButton">
+                <i class="bx bx-menu" id="btn"></i>
+            </button>
+        </div>
+        <nav class="catagory-wrapper" id="catagoryWrapper">
+            <div class="lib-cat">
+                <button class="menu-headings-btn" id="profileBtn">
+                    <i class="bx bx-user icon-profile" name="Profile"></i>
+                    <p class="menu-headings">profile</p>
+                </button>
+                <ul class="profile-menu-bar">
+                    <li class="menu-btns"><a href="User Profile.html">Show</a></li>
+                    <li class="menu-btns"><a href="Edit Profile.html">Edit</a></li>
+                </ul>
+            </div>
+            <div class="lib-cat">
+                <button class="menu-headings-btn" id="categoriesBtn">
+                    <i class="bx bx-grid-alt icon-catagory" name="Catagories"></i>
+                    <p class="menu-headings"> Catagories</p>
+                </button>
+                <ul class="catagory-menu-bar">
+                    <li class="menu-btns"><a href="Story Books.html">Story</a></li>
+                    <li class="menu-btns"><a href="novel books.html">Novel</a></li>
+                    <li class="menu-btns"><a href="Technical Books.html">Technical</a></li>
+                    <li class="menu-btns"><a href="Poem Books.html">Poem</a></li>
+                </ul>
+            </div>
+            <div class="lib-cat">
+                <button class="menu-headings-btn" id="statusBtn">
+                    <i class='bx bxs-doughnut-chart icon-Status' name="Status"></i>
+                    <p class="menu-headings">Status</p>
+                </button>
+                <ul class="status-menu-bar">
+                    <li class="menu-btns"><a href="#">User Status</a></li>
+                    <li class="menu-btns"><a href="#">Return Date</a></li>
+                    <li class="menu-btns"><a href="#">Issued Book</a></li>
+                    <li class="menu-btns"><a href="#">Request Book</a></li>    
+                </ul>
+            </div>
+           <div class="lib-cat">
+                <button class="menu-headings-btn" id="paymentBtn">
+                    <iconify-icon class="icon-payment" name="Payment" icon="tdesign:money"></iconify-icon>
+                    <p class="menu-headings">Payment</p>
+                </button>
+                <ul class="payment-menu-bar">
+                    <li class="menu-btns"><a href="Payment Card Details Page.html">Card</a></li>
+                    <li class="menu-btns"><a href="Payment Netbanking Page.html">Net Banking</a></li>   
+                </ul>
+            </div>
+        </nav>
+        <div class="logouts">
+           <button class="menu-headings-btn">
+                <p class="menu-headings">Log-Out</p>
+                <a href="login.html"><iconify-icon icon="heroicons-outline:logout" width="30"></iconify-icon></a>
+            </button>
+            
+        </div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sideNav = document.getElementById('sideNav');
+        const catagoryWrapper = document.getElementById('catagoryWrapper');
+        const panCakeBtn = document.getElementById('openSidebarButton');
+        const profileBtn = document.getElementById('profileBtn');
+        const categoriesBtn = document.getElementById('categoriesBtn');
+        const statusBtn = document.getElementById('statusBtn');
+        const paymentBtn = document.getElementById('paymentBtn');
+        const toggleSidebar = () => {
+            sideNav.classList.toggle('expanded-sidebar');
+            sideNav.classList.remove('open-profile-menu-bar', 'open-catagory-menu-bar', 'open-status-menu-bar', 'open-payment-menu-bar');
+        };
+         const toggleProfileMenuBar = () => {
+            if (!sideNav.classList.contains('expanded-sidebar')) {
+                toggleSidebar();
+            }
+            sideNav.classList.toggle('open-profile-menu-bar');
+            sideNav.classList.remove('open-catagory-menu-bar', 'open-status-menu-bar', 'open-payment-menu-bar');
+        };
+         const toggleCatagoryMenuBar = () => {
+            if (!sideNav.classList.contains('expanded-sidebar')) {
+                toggleSidebar();
+            }
+            sideNav.classList.toggle('open-catagory-menu-bar');
+            sideNav.classList.remove('open-profile-menu-bar', 'open-status-menu-bar', 'open-payment-menu-bar');
+        };
+        const toggleStatusMenuBar = () => {
+            if (!sideNav.classList.contains('expanded-sidebar')) {
+                toggleSidebar();
+            }
+            sideNav.classList.toggle('open-status-menu-bar');
+            sideNav.classList.remove('open-profile-menu-bar', 'open-catagory-menu-bar', 'open-payment-menu-bar');
+        };
+        const togglePaymentMenuBar = () => {
+            if (!sideNav.classList.contains('expanded-sidebar')) {
+                toggleSidebar();
+            }
+            sideNav.classList.toggle('open-payment-menu-bar');
+            sideNav.classList.remove('open-profile-menu-bar', 'open-catagory-menu-bar', 'open-status-menu-bar');
+        };
+        panCakeBtn.addEventListener('click', toggleSidebar);
+        catagoryWrapper.addEventListener('click', (e) => {
+            if (e.target !== sideNav && !sideNav.classList.contains('expanded-sidebar')) {
+                toggleSidebar();
+            }
+        });
+        categoriesBtn.addEventListener('click', toggleCatagoryMenuBar);
+        statusBtn.addEventListener('click', toggleStatusMenuBar);
+        profileBtn.addEventListener('click', toggleProfileMenuBar);
+        paymentBtn.addEventListener('click', togglePaymentMenuBar);
+    });
+</script>
+</body>
+<title> My - Books Collection</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        header {
+            background-color: #ff9999;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 10px 10px 10px #0000;
+        }
+        .book-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .book {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .book-list a {
+            display:block;
+            background-color:brown;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin: 15px auto;
+            width: 120px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Readcrafter </h1>
+    </header>
+    <section class="book-list">
+        <article class="book">
+            <img src="12027132845-225x300.jpg" alt="Book 1">
+            <h2>The Bed Book</h2>
+            <p>Author: Sylvia Plath</p>
+            <a href="books/book1.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+           <img src="image 1.jpeg" alt="Book 1">
+            <h2>Book Of Hours</h2>
+            <p>Author: Kevin Young</p>
+            <a href="books/book2.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+           <img src="images (4).jpeg" alt="Book 1">
+            <h2>Beauty And The Beast</h2>
+            <p>Author: Robert Sabuda</p>
+            <a href="books/book3.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="images 1.jpeg" alt="Book 1">
+            <h2>Secret</h2>
+            <p>Author:Pseudonymous Bosch</p>
+            <a href="books/book4.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+             <img src="images.jfif" alt="Book 2">
+            <h2>Write My Name Across The Sky</h2>
+            <p>Author: Barbara O'Neal</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+           <img src="image 2.jpeg" alt="Book 2">
+            <h2>Mysterious Collection Of Poems</h2>
+            <p>Author: Pabitra Adhikary</p>
+            <a href="books/book1.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+             <img src="image (5).jpeg" alt="Book 2">
+            <h2>The Collector Of Names</h2>
+            <p>Author: Patrick Hicks</p>
+            <a href="books/book2.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="images 2.jpeg" alt="Book 2">
+            <h2>The History Of The Future</h2>
+            <p>Author: Blake J.Harris</p>
+            <a href="books/book3.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+              <img src="images (1).jfif" alt="Book 3">
+            <h2>Morgen Is My Name</h2>
+            <p>Author: Sophie Keetch</p>
+            <a href="books/book4.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+           <img src="image 3.jpeg" alt="Book 3">
+            <h2>The Truth About Magic</h2>
+            <p>Author: Atticus</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+           <img src="image (6).jpeg" alt="Book 3">
+            <h2>Just Harriet</h2>
+            <p>Author: Elana K.Arnold</p>
+            <a href="books/book1.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+             <img src="images 3.jpeg" alt="Book 3">
+            <h2>Primitive Technology</h2>
+            <p>Author: John Plant</p>
+            <a href="books/book2.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="images (2).jfif" alt="Book 4">
+            <h2>The Face At The Window</h2>
+            <p>Author: Kiran Manral</p>
+            <a href="books/book3.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="image 4.jpeg" alt="Book 4">
+            <h2>Rise And Float</h2>
+            <p>Author:Brian Tierney</p>
+            <a href="books/book4.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="image (7).jpeg" alt="Book 4">
+            <h2>The Cat In The Hat</h2>
+            <p>Author: Dr.Seuss</p>
+            <a href="books/book4.pdf" target="_blank">Read</a>
+        </article>
+         <article class="book">
+            <img src="images 4.jpeg" alt="Book 4">
+            <h2>Effective Java</h2>
+            <p>Author:Joshua Bloch</p>
+            <a href="books/book4.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="images (3).jfif" alt="Book 5">
+            <h2>King of Pride</h2>
+            <p>Author: Ana Huang</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+         <article class="book">
+            <img src="image 5.jpeg" alt="Book 5">
+            <h2>To Breathe With You</h2>
+            <p>Author: James Johanson</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+        <article class="book">
+            <img src="image (8).jpeg" alt="Book 5">
+            <h2>A Death By Any Other Name</h2>
+            <p>Author: Tessa Arlen</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+         <article class="book">
+            <img src="images 5.jpeg" alt="Book 5">
+            <h2>Educational Technology And Management</h2>
+            <p>Author: J.C.Aggarwal</p>
+            <a href="books/book5.pdf" target="_blank">Read</a>
+        </article>
+    </section>
+    
+    </a>
+    </body>
+</html>
+
+
+
+
+<!-- INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('RAJU', 1, 5, 'BCA' , 100);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('ROHAN', 2, 5, 'BCA' , 150);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('ANIL', 3, 5, 'BCA' , 150);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('AMAL', 4, 6, 'BCA' , 300);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('BIMAL', 5, 6, 'MCA' , 300);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('BIPLAB', 6, 7, 'MCA' , 350);
+INSERT INTO ST_INFO(SNAME, STUDENT_ID, SENIOR_ID, DEPT, SCORE) VALUES('AVIJIT', 7, NULL ,'MCA' , 500); -->
+
+
+<!-- var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; -->

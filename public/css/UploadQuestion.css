@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    background-color: #383545 !important;
+}
+
+.site-title{  
+  margin-top: 1rem;
+  text-align: center;
+  color: black;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.Subject-select-style {
+  align-self: start;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('https://api.iconify.design/material-symbols/arrow-drop-down-rounded.svg?width=24&height=24') no-repeat center center / contain;
+  background-position: right center;
+  background-size: 32px 32px;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  color:yellow;
+  width: 250px;
+  height: 40px;
+}
+
+.Subject-select-style option{
+  background-color: #383545;
+}
+
+table {
+  margin: 1rem auto;
+  border-collapse: collapse;
+  width: 100%;
+  border: 3px solid #D4ADFC;
+}
+
+.option-rows{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: .8rem;
+}
+th {
+  background-color: #F4EEE0;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  /* border-bottom: 1px solid #ddd; */
+  color:black;
+}
+
+tbody tr:nth-of-type(n) {
+  background-color: #6D5D6E;
+}
+
+tbody tr:nth-of-type(2n) {
+  background-color: #4F4557;
+}
+
+
+input[type=text] {
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 10px;
+  margin: .4rem .2rem;
+  border: 2px solid yellow;
+  color: yellow;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+input[type=text]::placeholder {
+  color: #F4EEE0; 
+}
+
+textarea.form-control {
+  background-color: transparent;
+  max-width: 80dvw;
+  min-width: 80dvw;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 8px 10px;
+  margin: .4rem .2rem;
+  border: 2px solid yellow;
+  color: yellow;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  line-height: 1.5; 
+}
+
+textarea.form-control::placeholder {
+  color: #F4EEE0; 
+}
+
+
+
+/* Style the submit button */
+button[type=submit] {
+  font-family: 'Rubik', sans-serif;
+  padding: 0.45rem 2rem .3rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: yellow;
+  background-color: transparent;
+  border: 2px solid yellow;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+button[type=submit]:hover {
+  box-shadow: inset 300px 0 10px 0 yellow;
+  color: #83142C;
+  border: 2px solid #ffffff;
+}
+
+
+
+
+

@@ -155,6 +155,15 @@
                 passwordToggle2.innerHTML = '<img src="{{ asset('svg/lock-outline.svg') }}" alt="Lock icon">';      
             }
         });
+        // function showHideLockFunction( passToggle,conPassword) {
+        //     if (conPassword.type === 'password') {
+        //         conPassword.type = 'text';
+        //         passToggle.innerHTML = '<img src="{{ asset('svg/lock-open-right-outline.svg') }}" alt="Lock open icon">';
+        //     } else {
+        //         conPassword.type = 'password';
+        //         passToggle.innerHTML = '<img src="{{ asset('svg/lock-outline.svg') }}" alt="Lock icon">';      
+        //     }
+        // }
 
 
         // gender dropdown section

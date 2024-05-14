@@ -1,0 +1,123 @@
+body {
+    background-color: #ff9999;
+    margin: 0;
+}
+
+.site-background {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("pic1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.site-title {
+    display: flex;
+    font-size: 50px;
+    line-height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+.navbar {
+    position: fixed;
+    backdrop-filter: blur(1px);
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    height: 80px;
+    width: 900px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.adminsignin-btn {
+    width: 150px;
+}
+
+.btn-grp {
+    display: flex;
+    height: 80px;
+    width: 500px;
+    justify-content: right;
+    align-items: center;
+    gap: 24px;
+
+}
+
+button:hover {
+    background-color: deeppink;
+    letter-spacing: 0.05em;
+    /* box-shadow:0 0 25px;*/
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .container .sec {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    justify-content: left;
+}
+
+footer .container .sec.aboutus {
+    width: 40%;
+}
+
+footer .container .sci li {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}

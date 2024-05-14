@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@500&display=swap');
+dialog {
+  margin: 0 auto;
+}
+dialog::backdrop {
+  background: #0000003b;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+form {
+  width: 390px;
+  margin: auto;
+  padding: 20px;
+  background: #9E9C71;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="text"]::selection,
+form input[type="password"]::selection,
+form input[type="email"]::selection,
+form input[type="date"]::selection {
+  background-color: #efff16cb;
+}
+
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  font-weight: bold;
+  margin-top: .5rem ;
+  width: 170px;
+}
+
+.text-danger {
+  font-family: 'Times New Roman', Times, serif;
+  color: red !important;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+ .Gnd-type {
+  display: flex;
+  flex-direction: row;
+  padding-right: 6px;
+  margin: 0%;
+
+
+}
+
+.dob_gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 0%;
+
+}
+
+.Gender {
+  display: flex;
+  font-family:  arial ;
+  font-weight: 8;
+  margin:5px auto 0 .7rem;
+
+}
+
+.Gender input[type="radio"] {
+  appearance: none;
+  border: 2px solid #ff0000;
+  border-radius: 30%;
+  width: 17px;
+  height: 17px;
+  margin: 3px 0px 0px 5px;
+}
+
+.Gender input[type="radio"]:checked {
+  background-color: #00f604;
+}
+
+.Gender input[type="radio"]:focus {
+  outline: none;
+  border-color: #2b00ff;
+}
+
+.Gender input[type="radio"]:hover {
+  background-color: #f2ff00;
+}
+
+ .male{
+  margin-left: 25px ;
+}
+ .female{
+  margin-left: 7px ;
+}
+ .other{
+  margin-left: 13px ;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+form input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #008be8;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #00f2ff;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease 0s;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */

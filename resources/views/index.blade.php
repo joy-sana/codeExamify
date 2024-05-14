@@ -79,7 +79,7 @@
 
     <header class="site-header">
         <div class="site-header-mask">
-            <h1 class="site-title"><span>CodE</span>xamify</h1>
+
         </div>
     </header>
 
@@ -507,3 +507,130 @@
 
 </html>
 <!-- Initialize Swiper -->
+
+
+{{-- 
+
+---COCOMO
+    -what is cocomo
+    -type of cocomo
+    -what kind of cocomo used in your project and why
+    -how do you know you used this cocomo model
+
+---ERD
+    -Study your Erd properly and implement it properly like project 
+    -If something is not implemented in your project do not apply that thing on erd do not show extra thing in erd 
+
+---DFD
+    -Implement in properly 
+    -Level of dfd
+    -context dfd
+
+---SDLC
+    -what kind of model you use
+
+---BACKEND
+    -How did you implement authentication, data fetching, prevent duplicate data (email/mobile no/userId/username),logout, storing book,library system, whole backend ETC. 
+    -What kind of Admin do you have (normal admin or Super admin)
+    
+
+
+
+    <emp>
+    <employee>
+        <empname>John Doe</empname>
+        <id>001</id>
+        <gender>Male</gender>
+        <address>
+            <street>
+                <street1>Main Street</street1>
+                <street2>Apartment 123</street2>
+            </street>
+            <city>New York</city>
+            <region>NY</region>
+            <postalcode>10001</postalcode>
+            <countrycode c_id="US">USA</countrycode>
+        </address>
+    </employee>
+    
+    <employee>
+        <empname>Jane Smith</empname>
+        <id>002</id>
+        <gender>Female</gender>
+        <address>
+            <street>
+                <street1>First Avenue</street1>
+                <street2>Suite 456</street2>
+            </street>
+            <city>Los Angeles</city>
+            <region>CA</region>
+            <postalcode>90001</postalcode>
+            <countrycode c_id="US">USA</countrycode>
+        </address>
+    </employee>
+</emp>
+
+
+9. Find maximum and minimum element in an array in PHP:
+php
+Ans
+<?php
+$array = array(5, 2, 8, 1, 6);
+
+$max = max($array);
+$min = min($array);
+
+echo "Maximum Element: $max<br>";
+echo "Minimum Element: $min";
+?>
+10. Program to change strings in an array to uppercase:
+php
+Copy code
+<?php
+$array = array("apple", "banana", "cherry");
+
+$uppercaseArray = array_map('strtoupper', $array);
+
+print_r($uppercaseArray);
+?>
+11. Program for Writing Data to a file in PHP:
+php
+Copy code
+<?php
+$data = "Hello, this is some data to be written to a file.";
+
+// Open the file in write mode
+$file = fopen("example.txt", "w");
+
+// Write data to the file
+fwrite($file, $data);
+
+// Close the file
+fclose($file);
+
+echo "Data written to file successfully.";
+?>
+12. Program to create and retrieve an applet in PHP:
+Note: PHP is a server-side scripting language, and traditionally, applets are associated with client-side technologies like Java. PHP itself doesn't create or run client-side applets. However, if you want to embed Java applets into HTML using PHP, you can do so using HTML and PHP.
+
+php
+Copy code
+<?php
+// PHP code to generate HTML with embedded Java applet
+echo '<html>';
+echo '<head>';
+echo '<title>PHP Applet Example</title>';
+echo '</head>';
+echo '<body>';
+echo '<applet code="YourAppletClass.class" width="300" height="300">';
+echo 'Your browser does not support the Java applet tag.';
+echo '</applet>';
+echo '</body>';
+echo '</html>';
+?>
+
+
+
+
+
+ --}}

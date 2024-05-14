@@ -1,0 +1,113 @@
+body{
+    min-height: 100vh;
+    background: url('image/feedbackBackground.jpg')no-repeat;
+    background-size: contain;
+}
+
+.feedback-form-wrapper {
+    font-family: 'Ubuntu', sans-serif !important;
+    position: relative;
+    width: 540px;
+    height: 320px;
+    margin: 1rem auto ;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+}
+.feedback-form-wrapper h2{
+    color: yellow;
+    text-align: center;
+    text-shadow: #2ecc71;
+    padding: 1rem;
+}
+.username, #username {
+    display: none;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.4);
+    min-width: 500px;
+    min-height: 180px;
+    max-width: 500px;
+    max-height: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form button {
+    height: 40px;
+    width: 300px;
+    margin: .8rem 100px;
+    background: rgba(206, 206, 206, 0.377) !important;
+    padding: 2px auto;
+    color: black !important;
+    border: none;
+    font-size: .9rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px blue;
+    transition: all 400ms ease-in;
+}
+
+/* form button:hover {
+    background-color: rgb(75, 109, 223);
+    font-size: 1rem;
+    border-radius: 8px;
+    color: black;
+} */
+
+form button::before {
+    content: '';
+    position: absolute;
+    margin: -4px 0 0 -40px;
+    width: 30px;
+    height: 30px;
+    background-image: url("loading-fill.svg");
+    background-size: contain;
+    animation: spin 1s linear infinite;
+    display: none; /* hide the element by default */
+}
+
+form button.clicked::before {
+  display: inline-block; /* show the element when button has 'clicked' class */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert-success {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    margin-inline: auto;
+    color: yellowgreen;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    /* animation-delay: 0.1s; */
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}

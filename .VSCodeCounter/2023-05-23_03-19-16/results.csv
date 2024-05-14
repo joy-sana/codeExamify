@@ -1,0 +1,17 @@
+"filename", "language", "PHP", "comment", "blank", "total"
+"c:\xamppnew\htdocs\project\loginSystem\config\app.php", "PHP", 48, 134, 34, 216
+"c:\xamppnew\htdocs\project\loginSystem\config\auth.php", "PHP", 44, 74, 15, 133
+"c:\xamppnew\htdocs\project\loginSystem\config\broadcasting.php", "PHP", 35, 23, 13, 71
+"c:\xamppnew\htdocs\project\loginSystem\config\cache.php", "PHP", 58, 34, 19, 111
+"c:\xamppnew\htdocs\project\loginSystem\config\cors.php", "PHP", 3, 29, 3, 35
+"c:\xamppnew\htdocs\project\loginSystem\config\database.php", "PHP", 83, 47, 22, 152
+"c:\xamppnew\htdocs\project\loginSystem\config\filesystems.php", "PHP", 32, 32, 13, 77
+"c:\xamppnew\htdocs\project\loginSystem\config\hashing.php", "PHP", 12, 32, 9, 53
+"c:\xamppnew\htdocs\project\loginSystem\config\logging.php", "PHP", 71, 34, 19, 124
+"c:\xamppnew\htdocs\project\loginSystem\config\mail.php", "PHP", 53, 53, 19, 125
+"c:\xamppnew\htdocs\project\loginSystem\config\queue.php", "PHP", 47, 32, 15, 94
+"c:\xamppnew\htdocs\project\loginSystem\config\sanctum.php", "PHP", 15, 41, 12, 68
+"c:\xamppnew\htdocs\project\loginSystem\config\services.php", "PHP", 17, 11, 7, 35
+"c:\xamppnew\htdocs\project\loginSystem\config\session.php", "PHP", 22, 147, 33, 202
+"c:\xamppnew\htdocs\project\loginSystem\config\view.php", "PHP", 10, 20, 7, 37
+"Total", "-", 550, 743, 240, 1533

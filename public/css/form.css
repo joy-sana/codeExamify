@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@500&display=swap');
+body {
+  font-family: 'Labrada', serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #FFE4C4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #9E9C71;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+form input[type="text"]::selection,
+form input[type="password"]::selection,
+form input[type="email"]::selection,
+form input[type="date"]::selection {
+background-color: #d2cd66;
+}
+
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+form input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  font-weight: bold;
+  width: 150px;
+}
+
+.text-danger{
+  font-family:'Times New Roman', Times, serif ;
+  color: red !important;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+div .G {
+  display: flex;
+  flex-direction: row;
+  padding-right: 6px;
+  margin: 0%;
+
+
+}
+
+div .dob_gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 0%;
+
+}
+
+.Gender {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0%;
+
+}
+
+.Gender input[type="radio"] {
+  appearance: none;
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  margin:3px 0px 0px 5px;
+}
+
+.Gender input[type="radio"]:checked {
+  background-color: #00f604;
+}
+
+.Gender input[type="radio"]:focus {
+  outline: none;
+  border-color: #2b00ff;
+}
+
+.Gender input[type="radio"]:hover {
+  background-color: #f2ff00;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+form input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #008be8;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #00f2ff;
+  border-radius: 30px;
+  color:#333;
+  transition: all 0.5s ease 0s;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.password-input-container {
+  display: contents;
+  align-items: center;
+}
+
+.show-password-container {
+  position: absolute;
+  color: #00df07;
+  margin: 35px 0px 0 380px;
+}
+
+.show-password-container label {
+  cursor: pointer;
+}
+
+.show-password-container i {
+  pointer-events: none;
+
+}
+
+/* Hide the checkbox */
+#show-password-checkbox,
+#show-password-checkbox-2,
+#show-password-checkbox-3 {
+  display: none;
+}
+
+
+/* Show the eye icon when the checkbox is checked */
+#show-password-checkbox:checked+label i ,
+#show-password-checkbox-2:checked+label i,
+#show-password-checkbox-3:checked+label i{
+  display: none;
+}
+
+
+#show-password-checkbox:checked+label:before,
+#show-password-checkbox-2:checked+label:before,
+#show-password-checkbox-3:checked+label:before {
+  content: "\f06e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: #ce0000;
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.signup_link {
+  color:#222221;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  font-size: large;
+}
+
+.signup_link a {
+  font-family: monospace;
+  color: #1500ff;
+  text-decoration: double;
+  margin-left: 5px;
+}
+
+.signup_link a:hover {
+  text-decoration: underline;
+  color: #01fffb;
+}

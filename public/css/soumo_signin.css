@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image/loginPageBg.jpg')no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    font-family: 'Ubuntu', sans-serif !important;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    transform: translateY(-65%) translateX(65%) scale(0);
+    animation: pop-in .5s forwards ease-in-out;
+}
+
+@keyframes pop-in {
+    0% {
+    transform: translateY(-65%) translateX(65%) scale(0);
+    }
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+/* input{
+
+    background-color: transparent;
+} */
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #82C3EC;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+/* .input-box input:focus~.email-input,
+.input-box input:not(:placeholder-shown) ~ .email-input 
+{
+    top: -5px;
+} */
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    /* background: transparent; */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #FFED00;
+    font-weight: 400;
+  
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.5em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #050505;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.button {
+    width: 95%;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #967bec;
+    right: 2%;
+  }
+  
+  .button:hover {
+    color: #FFED00;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  .button:active {
+    transform: scale(0.9);
+  }
+.Login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+
+}
+
+.Login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+.Login-register p a:hover{
+    text-decoration: underline;
+}

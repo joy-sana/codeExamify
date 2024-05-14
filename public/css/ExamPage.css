@@ -1,0 +1,338 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body {
+  background: url('image/Default_simple_background_for_exa.jpg');
+  background-size: cover;
+  margin: 0;
+  padding-top: 0;
+  position: relative;
+  height: 91vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(16, 10, 71, 0.644);
+  z-index: -1;
+}
+
+.Exam-wrapper {
+  background: transparent;
+  border: 2px solid rgba(77, 77, 77, 0.5);
+  backdrop-filter: blur(7px);
+  margin: 0;
+  margin-inline: auto;
+  margin-top: 0rem;
+  height: 110%;
+  width: 95%;
+  color: black;
+  border-radius: 1.2rem;
+}
+
+.exam-nav-bar {
+  margin-inline: auto;
+  height: 4rem;
+  width:  calc(90% - 2rem);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exam-nav-bar>h4 >span{
+  color: rgb(38, 255, 0);
+}
+.exam-nav-bar>h4 {
+  color: white;
+  margin: 0 1rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.timer-wrapper {
+  display: flex;
+  align-items: center;
+}
+.timer-icon{
+  color: rgb(38, 255, 0);
+  padding: 0;
+  line-height: 0;
+}
+.ExamTimer {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0);
+  padding: 4px 12px;
+
+}
+
+/*  */
+/*  */
+/*  */
+
+
+.form-wrapper {
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+  margin: 0.2rem auto;
+  height: calc(95dvh - 15rem);
+  width: calc(90% - 2rem);
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgba(234, 255, 0, 0.858);
+  box-shadow: 0 0 40px 1px rgba(255, 255, 0, 0.263);
+  overflow-y: auto;
+  padding: 0 3rem;
+  border-radius: .3rem;
+}
+
+.form-wrapper::-webkit-scrollbar {
+  width: 0.8rem;
+  /* Set width of scrollbar */
+}
+
+.form-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f100;
+  /* Set background color of track */
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+  background: #2121217d;
+  /* Set background color of thumb */
+  border-radius: 0.5rem;
+  /* Set border radius of thumb */
+}
+
+.form-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #00000098;
+  /* Set background color of thumb on hover */
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+.question {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 550;
+}
+
+.Question-NO {
+
+  padding: auto;
+  padding-right: 1.5rem;
+}
+
+.Question-text {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.question-option-section:first-child {
+  margin: 0 0 1rem 0;
+}
+
+.question-option-section:last-child {
+  margin: 1rem 0 0 0;
+}
+
+.question-option-section {
+  
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  border-top: 2px solid rgb(63, 63, 63);
+  border-bottom: 2px solid rgb(63, 63, 63);
+}
+
+.form-wrapper ul {
+
+  list-style-type: none;
+  padding: .5rem;
+  margin: 0 0 0 1.5rem;
+}
+
+.form-wrapper ul>li {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.form-wrapper li {
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-left: 0.5rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px rgb(0, 0, 0);
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:hover {
+  background-color: rgb(100, 255, 73);
+  scale: 1.1;
+}
+
+input[type="radio"]:checked {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px #c300ff;
+  background-color: rgb(38, 255, 0);
+  scale: 1.1;
+}
+input[type="radio"]:checked:hover{
+  scale: 1.2;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+.submit-botton {
+  margin-top: 3.5rem;
+  margin-inline: calc(5% + 1rem);
+  width: calc(90% - 2rem);
+  display: flex;
+  justify-content: end;
+  position: absolute;
+}
+
+.btn-submit-exam {
+  font-family: 'Rubik', sans-serif;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #16FF00;
+  background-color: #15ff0040;
+  border: 2px solid #16FF00;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.btn-submit-exam:hover {
+  box-shadow: inset 200px 0 10px 0 #16FF00;
+  color: #13005A;
+  border: 2px solid #ffffff;
+}
+
+.prev-next-btn-group {
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  width: calc(90% - 2rem);
+  position: relative;
+  top: .5rem;
+}
+
+.btn-prev-next {
+  background-color: #ffffff;
+  color: #13005A;
+  border: none;
+  padding: 0px 30px 0px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow:  0 0 50px 2px rgba(0, 0, 0, 0.493);
+  transition: all 0.25s ease-in-out ;
+}
+.btn-prev-next:hover{
+  box-shadow:  0 0 20px 2px #ffee005e;
+  padding: 0px 20px 0px 20px;
+  background-color: #ffee00;
+  top:-2px;
+}
+.btn-prev:hover{
+  border-radius: 50px  8px 8px 50px ;
+}
+
+.btn-next:hover{
+  border-radius: 8px 50px 50px 8px;
+
+}
+
+
+
+
+
+@media (660px < width < 880px) {
+
+  .Exam-wrapper {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    margin: 0.2rem auto;
+    height: calc(95dvh - 15rem);
+    width: calc(95% - 2rem);
+
+  }
+  .question-option-section {
+    height: 50%;
+  }
+}
+@media (660px > width ) {
+
+  .Exam-wrapper {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    padding: 0 .5rem;
+    margin: 0.2rem auto;
+    height: calc(90dvh - 15rem);
+    width: 100%;
+
+  }
+  .question-option-section {
+    margin: .5rem 0;
+    padding: .4rem .4rem;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .form-wrapper ul {
+    margin: 0 0 0 .5rem;
+  }
+
+
+
+.prev-next-btn-group {
+  width: calc(100% - 2rem);
+  top: .5rem;
+}
+
+.btn-submit-exam {
+  width: 100%;
+  transition: all .4s ease-in-out;
+}
+
+.btn-submit-exam:hover {
+  box-shadow: inset 600px 0 10px 0 #16FF00;
+  color: #13005A;
+  border: 2px solid #ffffff;
+}
+}

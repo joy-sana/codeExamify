@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image/loginPageBg.jpg')no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.wrapper {
+    font-family: 'Ubuntu', sans-serif !important;
+    margin-top: 2rem;
+    /* margin-inline:auto; */
+    position: relative;
+    width: 450px;
+    height: 780px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-55%) translateX(85%) scale(0);
+    animation: pop-in .6s forwards ease-in-out;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: translateY(-55%) translateX(85%) scale(0);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+}
+
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 3em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #162938;
+    margin: 20px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #82C3EC;
+    font-weight: 550;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.input-box input:valid~label,
+.input-box input:focus~label {
+    top: -5px;
+}
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #FFED00;
+    background: transparent;
+    font-weight: 400;
+    padding: 0 35px 0 5px;
+}
+
+.icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: #162938;
+    line-height: 67px;
+    transform: scale(.8);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+.input-box-dob-gender {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: 20px 0 40px 0;
+}
+
+/*  */
+/*  */
+
+.input-box-gender {
+    width: 45%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #162938;
+    margin-bottom: 40px;
+}
+
+.input-box-gender label {
+    margin: -10px 0 0px 4px;
+}
+
+.input-box-gender select {
+    font-size: 1em;
+    font-weight: 600;
+    color: #00E7FF;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0 0px 4px;
+}
+
+.input-box-gender option {
+    background-color: #19376D;
+}
+
+
+/*  */
+.input-box-date {
+    width: 45%;
+    margin-top: 0;
+}
+
+.gender-label {
+    font-size: 1em;
+    color: #82C3EC;
+    font-weight: 550;
+    pointer-events: none;
+}
+
+.input-box input[type="date"] {
+    width: 98%;
+    padding: 0 10px 0;
+    margin-left: 3px;
+    font-size: 1rem;
+    color: #00E7FF;
+    font-weight: 600;
+}
+
+.input-box-date>label {
+    /* position: sticky; */
+    margin: 5px 0 0px 0;
+}
+
+.input-box input:valid~.input-box-date>label,
+.input-box input:focus~.input-box-date>label {
+    top: 0;
+}
+
+/*  */
+/*  */
+
+
+.remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #050505;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 95%;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #967bec;
+    right: 2%;
+}
+
+.button:hover {
+    color: #FFED00;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.Login-register {
+    font-size: 16px;
+    color: #162938;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0;
+
+}
+
+.Login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Login-register p a:hover {
+    text-decoration: underline;
+}
