@@ -77,8 +77,8 @@
 
     @include('header')
 
-    <header class="site-header">
-        <div class="site-header-mask">
+    <header class="site-header">Code
+        <div class="site-header-mask">Examify
 
         </div>
     </header>
